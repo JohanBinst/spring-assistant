@@ -1,4 +1,4 @@
-package json.spring_assistant;
+package assistant;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

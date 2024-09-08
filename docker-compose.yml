@@ -1,0 +1,28 @@
+version: 2.29.2
+
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    volumes:
+      - ollama:/root/.ollama
+    ports:
+      - "11434:11434"
+    restart: unless-stopped
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: assistant
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5431:5432"
+    restart: unless-stopped
+
+volumes:
+    ollama:
+    postgres_data:

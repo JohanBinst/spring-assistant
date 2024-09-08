@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>json</groupId>
-	<artifactId>spring-assistant</artifactId>
+	<artifactId>assistant</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-assistant</name>
+	<name>assistant</name>
 	<description>AI assistant with Spring AI</description>
 	<url/>
 	<licenses>
@@ -28,6 +28,7 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
+		<spring-ai.version>1.0.0.M2</spring-ai.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -46,7 +47,7 @@
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
 			<artifactId>spring-ai-ollama-spring-boot-starter</artifactId>
-			<version>1.0.0.M2</version>
+			<version>${spring-ai.version}</version>
 		</dependency>
 
 		<dependency>
@@ -64,13 +65,19 @@
 		<dependency>
 			<groupId>org.apache.pdfbox</groupId>
 			<artifactId>pdfbox</artifactId>
-			<version>3.0.3</version>
+			<version>2.0.32</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
 			<artifactId>spring-ai-pgvector-store-spring-boot-starter</artifactId>
-			<version>1.0.0.M2</version>
+			<version>${spring-ai.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.ai</groupId>
+			<artifactId>spring-ai-spring-boot-docker-compose</artifactId>
+			<version>${spring-ai.version}</version>
 		</dependency>
 
 	</dependencies>
